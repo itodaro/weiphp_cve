@@ -30,9 +30,12 @@ In the ajaxMain function of the \Addons\YouaskService\Controller\IndexController
 
 ![1.png](./img/1.png)
 
-Line 138 gets the time variable submitted by post
-Line 144 splices the time variable into the SQL variable
-Line 152 passes SQL variables into where variables, and line 153 queries the database
+Line 138 gets the time variable submitted by post.
+
+Line 144 splices the time variable into the SQL variable.
+
+Line 152 passes SQL variables into where variables, and line 153 queries the database.
+
 The injection is caused by the use of splicing, and line 154 displays the queried data.
 
 Post requests the following data:
@@ -65,8 +68,9 @@ In the showExternalPic function of \Addons\YouaskService\Controller\IndexControl
 
 ![3.png](./img/3.png)
 
-Line 238 gets the data to be requested through the url variable
-Line 248 requests data via php's curl protocol
+Line 238 gets the data to be requested through the url variable.
+
+Line 248 requests data via php's curl protocol.
 
 request ```view-source:http://127.0.0.1/index.php?s=/addon/YouaskService/index/showExternalPic/wecha_id/1/token/2/&url=file:///etc/passwd```
 
@@ -81,7 +85,9 @@ In the param function of \Addons\Diy\Controller\DiyController.class.php:
 ![6.png](./img/6.png)
 
 Line 106 will cache the contents into the file via the S function of thinkphp.
+
 When submitting the page_id parameter value is 1
+
 The file name is md5(diy_1),/Runtime/Temp/1dd633b3128a336438a6a99b6b18980e.php
 
 ![7.png](./img/7.png)
@@ -119,6 +125,7 @@ In the save function of \Application\Admin\Controller\ConfigController.class.php
 ![9.png](./img/9.png)
 
 Line 126 will cache the contents into the file via the S function of thinkphp.
+
 The file name is md5('DB_CONFIG_DATA'),/Runtime/Temp/95a1fe934b68ebfee8468bf0bc4f0000.php
 
 And because there is no restriction on the input data, the executable code can be inserted by line break, resulting in code execution.
